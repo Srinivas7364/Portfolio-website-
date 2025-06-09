@@ -1,0 +1,40 @@
+import { Card, CardContent } from "@/components/ui/card" import { Button } from "@/components/ui/button"
+
+export default function Portfolio() { return ( <div className="min-h-screen bg-gray-100 p-6"> <div className="max-w-4xl mx-auto"> <header className="text-center mb-10"> <h1 className="text-4xl font-bold text-gray-800">G. SRINIVAS</h1> <p className="text-xl text-gray-600 mt-2">College Student Looking for Internship</p> </header>
+
+<section className="mb-10">
+      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Skills</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        {['Blender', 'Python', 'Java', 'C++', 'Canva', 'Filmora', 'CapCut'].map(skill => (
+          <Card key={skill} className="bg-white shadow rounded-xl p-4">
+            <CardContent className="text-center text-gray-800 font-medium">{skill}</CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+
+    <section className="mb-10">
+      <h2 className="text-2xl font-semibold text-gray-700 mb-4">Portfolio</h2>
+      <Card className="bg-white shadow rounded-xl p-6">
+        <CardContent>
+          <p className="mb-4 text-gray-700">You can view my project works here:</p>
+          <a
+            href="https://drive.google.com/drive/folders/1QkI-mhLWtdWwwlJ6Hj_hNq0H0V_hp9YM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:underline"
+          >
+            View My Drive Portfolio
+          </a>
+        </CardContent>
+      </Card>
+    </section>
+
+    <footer className="text-center text-gray-500 mt-16">
+      © {new Date().getFullYear()} G. SRINIVAS. All rights reserved.
+    </footer>
+  </div>
+</div>
+
+) }
+
